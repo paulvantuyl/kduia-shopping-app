@@ -85,7 +85,7 @@ export const AppProvider = (props) => {
 
     const totalExpenses = state.expenses.reduce((total, item) => {
         // I wonder if I can use an addition assignment here to shorten this?
-        return (total = total + (item.unitprice * item.quantity)); 
+        return (total += (item.unitprice * item.quantity)); 
     }, 0);
 
     state.CartValue = totalExpenses;
